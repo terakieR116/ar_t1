@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My AR Model (Demo)</title>
+  <!-- Use model-viewer from Google CDN -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <style>
+    html, body { margin: 0; height: 100%; }
+    model-viewer { width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+  <!--
+    Android: uses GLB via WebXR/Scene Viewer
+    iOS: uses Quick Look via ios-src (pointing to Apple's public USDZ sample)
+    Replace ios-src with your own USDZ when ready.
+  -->
+  <model-viewer 
+    src="model.glb"
+    ios-src="https://developer.apple.com/augmented-reality/quick-look/models/pancakes/pancakes.usdz"
+    alt="Demo 3D model"
+    ar
+    ar-modes="scene-viewer quick-look webxr"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1">
+  </model-viewer>
+</body>
+</html>
